@@ -1,0 +1,112 @@
+/* Reset y estilos principales */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.contenedor,
+.contenedor-padre,
+.contenedor-scroll,
+.contenedor-zindez {
+  border: 2px solid black;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.caja,
+.hijo-absolute,
+.boton-fixed,
+.elemento-sticky,
+.capa {
+  border: 1px solid red;
+  padding: 10px;
+}
+
+/*position: static; */
+/* Posición por defecto de los elementos en el orden natural del html */
+
+/* position: relative */
+/* Similar a static pero podemos usar las propiedades top, right, bottom, left. El espacio creado no puede ser usado por ningún otro elemento. */
+
+.caja-relative {
+  background-color: lightcyan;
+  position: relative;
+  top: 20px;
+  left: 40px;
+}
+
+/* postion: absolute; */
+/* Se posiciona en relación a su ancestro distinto de static. El espacio libre puede ser ocupado por otro elemento cercano. Si no tiene ancestro distinto de static, usará el elemento body para posicionarse. */
+
+.contenedor-padre {
+  position: relative;
+  height: 100px;
+}
+
+.hijo-absolute {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: antiquewhite;
+}
+
+/* position:fixed */
+/* El elemento queda fijo en la posición indicada en el flujo del html, aunque hagamos scroll. Puede usar igualmente las propiedades top, right, bottom, left */
+
+.boton-fixed {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+/* position: sticky */
+/* Mantiene la posición static indicada en el flujo del html y cuando llega la posición indicada por las propiedades top, right, bottom o left, pasa a ser fixed. */
+
+.contenedor-scroll {
+  height: 150px;
+  overflow: auto;
+}
+
+.elemento-sticky {
+  background-color: bisque;
+  position: sticky;
+  top: 0px;
+}
+
+/* Propiedad z-index */
+/* Indica la capa donde queremos posicionar el elemento (like onion - ceapa) */
+
+.contenedor-zindex {
+  position: relative;
+  height: 150px;
+}
+
+.capa {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+}
+
+.capa-1 {
+  background-color: blue;
+  color: beige;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+.capa-2 {
+  background-color: red;
+  color: bisque;
+  top: 40px;
+  left: 40px;
+  z-index: 20;
+}
+
+.capa-3 {
+  background-color: green;
+  color: azure;
+  top: 60px;
+  left: 60px;
+}

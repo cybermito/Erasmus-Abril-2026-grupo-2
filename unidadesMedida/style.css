@@ -1,0 +1,86 @@
+/* Reset y estilos principales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.container {
+  border: 2px solid black;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.box {
+  border: 1px solid red;
+  padding: 20px;
+  margin-bottom: 16px;
+  background: lightcyan;
+}
+
+/* MEDIDAS ABSOLUTAS */
+/* Son medidas fijas, no cambian. px, cm, in, ...*/
+.box-px {
+  width: 200px;
+}
+
+/* MEDIDAS RELATIVAS */
+/* Son medidas que cambian en relación a algún elemento, normalmente el elemento padre o raiz */
+
+/* Porcentaje % */
+.box-percent {
+  width: 50%;
+}
+
+/* rem */
+/* Es relativo al tamaño de la fuente del elemento raiz (etiqueta html) configurado por defecto.
+Por ejemplo:
+
+html{
+    font-size: 16px;
+}
+
+1rem == 16px
+2rem == 32px
+1.5rem == 24px
+*/
+.box-rem {
+  width: 15rem;
+}
+
+/* em */
+/* Medida relativa al font-size del elemento padre 
+Por ejemplo:
+
+.box-container{
+    font-size: 20px;
+}
+
+1em == 20px
+2em ==
+1.2 ==
+*/
+.box-em {
+  font-size: 25px;
+  width: 3em;
+}
+
+/* viewport width */
+/* Medida relativa al ancho del viewport (ventana) 
+Por ejemplo: viewport width == 1000px
+10vw == 10% del viewport == 100px
+*/
+
+.box-vw {
+  width: 30vw;
+}
+
+/* viewport heigth */
+.box-vh {
+  height: 20vh;
+}

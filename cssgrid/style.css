@@ -1,0 +1,80 @@
+/* CSS GRID */
+/*
+Juego para practicar CSS Grid:
+https://cssgridgarden.com/
+
+Guia CSS Grid: (buscar en google "CSS TRICKS GRID")
+https://css-tricks.com/css-grid-layout-guide/
+*/
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: monospace;
+  font-size: 20px;
+}
+
+h1,
+h2 {
+  background-color: orangered;
+  color: black;
+}
+
+.item {
+  background-color: black;
+  color: greenyellow;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid greenyellow;
+}
+
+/* GRID SIMPLE 2 X 2 */
+.grid-simple {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+}
+
+/* Posicionar un elemento en una celda específica del grid */
+
+.grid-simple .item:nth-child(4) {
+  background-color: greenyellow;
+  color: black;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+/* Otra forma de asignar las columnas y las filas. Otra medida de tamaño fr == fracción */
+
+.grid-fr {
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr;
+}
+
+/* Margen - hueco entre filas y columnas (gap) */
+.grid-gap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.mi-galeria {
+  margin-top: 2em;
+  display: grid; /* ¡Activa la cuadrícula mágica! */
+  grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas iguales */
+  gap: 10px; /* Deja un pasillo pequeño entre fotos para que no se peguen */
+  border: 1px solid greenyellow;
+  padding: 5px;
+  background-color: lightgrey;
+}
+
+img {
+  width: 100%; /* La foto ocupa todo su cuadrito */
+  border-radius: 15px; /* Bordes suaves como una nube ☁️ */
+  box-shadow: 5px 5px 10px orangered;
+}
